@@ -10,27 +10,20 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         { 
-            // Declare variables
-            int num1;
-            int num2;
+            call(); 
+            Console.WriteLine("test");
+        }
 
-            // Ask to input new integer
-            Console.WriteLine("Type a number to be multiplied: ");
-
-            // Read the user input and convert from string to integer 32 bit
-            num1 = Convert.ToInt32(Console.ReadLine());
-
-            // Ask to input second integer
-            Console.WriteLine("Type another number: ");
-
-            // Read the user input and convert from string to integer 32 bit
-            num2 = Convert.ToInt32(Console.ReadLine());
-
-            // Mutiply the 2 integer inputed
-            Console.WriteLine("The result is :" + num1 * num2);  
-
-            // Wait to press any key before console quit
-            Console.ReadKey();
+        public static void call()
+        {
+            Game_Pocket game_pocket = new Game_Pocket();
+            Player player = new Player(); 
+            game_pocket.Connecting(); 
+            player.Walk();
+            player.Jump();
+            player.Swimming(); 
+             
+            Console.WriteLine("sit {0}", game_pocket.Sit());
         }
     }
 }
