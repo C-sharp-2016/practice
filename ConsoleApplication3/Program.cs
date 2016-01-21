@@ -18,11 +18,17 @@ namespace ConsoleApplication3
             testing.X = 60;
             testing.DisplayX(); 
             Console.WriteLine("This amega");
-        } 
+        }
+
+        public static void print()
+        {
+            Console.WriteLine("test");
+        }
+
     }
 
 
-    class Testing
+    class Testing : Program
     {
         private int xval;
         public int X
@@ -41,6 +47,9 @@ namespace ConsoleApplication3
         public void DisplayX()
         {
             Console.WriteLine("The stored value is: {0}", xval);
+            print();
         }
+
+         
     }
 }
