@@ -3,27 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+ 
+     
 
 namespace ConsoleApplication3
 {
     class Program
-    {
+    {   
         static void Main(string[] args)
         { 
-            call(); 
-            Console.WriteLine("test");
+            Testing testing = new Testing();
+            testing.X = 12; 
+            Console.WriteLine("total {0}", testing.X);
+            testing.X = 60;
+            testing.DisplayX(); 
+            Console.WriteLine("This amega");
+        } 
+    }
+
+
+    class Testing
+    {
+        private int xval;
+        public int X
+        {
+            get
+            {
+                return xval;
+            }
+            set
+            {
+                if (value < 100)
+                    xval = value + 200;
+            }
         }
 
-        public static void call()
+        public void DisplayX()
         {
-            Game_Pocket game_pocket = new Game_Pocket();
-            Player player = new Player(); 
-            game_pocket.Connecting(); 
-            player.Walk();
-            player.Jump();
-            player.Swimming(); 
-             
-            Console.WriteLine("sit {0}", game_pocket.Sit());
+            Console.WriteLine("The stored value is: {0}", xval);
         }
     }
 }
