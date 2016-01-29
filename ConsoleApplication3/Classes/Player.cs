@@ -8,27 +8,17 @@ namespace ConsoleApplication3
 {
     class Player
     {
-        public int rest = 0;
 
-        public Player()
+        private static int _MyVar = 0;
+        public static int MyVar
         {
-            Console.WriteLine("game pocket started");
+            get { return _MyVar; }
+            set { _MyVar = value; }
         }
 
-        public void Jump()
+        public string testc()
         {
-            Console.WriteLine("Jumping....");
-        }
-        public void Walk()
-        {
-            Console.WriteLine("Walking...."); 
-            Game_Pocket game_pocket =  new Game_Pocket();
-            game_pocket.Playing(); 
-        }
-
-        public void Swimming()
-        {
-            Console.WriteLine("Swimming....");
+            return "asdasd";
         }
     }
 }
