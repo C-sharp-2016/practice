@@ -7,36 +7,18 @@ using System.Threading.Tasks;
      
 
 namespace ConsoleApplication3
-{
-    struct SimpleStruct
-    {
-        private int xval;
-        public int X
-        {
-            get
-            {
-                return xval;
-            }
-            set
-            {
-                if (value < 100)
-                    xval = value;
-            }
-        }
-        public void DisplayX()
-        {
-            Console.WriteLine("The stored value is: {0}", xval);
-        }
-    }
-
+{ 
 
     class Program
     {
         static void Main(string[] args)
         {
-            SimpleStruct ss = new SimpleStruct();
-            ss.X = 5;
-            ss.DisplayX();
+            int mapId = 100;
+            int itemId = 200;
+            int UID = 1;
+
+            Console.WriteLine("map id {0} item id {1} and uid {2}", mapId, itemId, UID);
+            
         }
     }
 
