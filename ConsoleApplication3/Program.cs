@@ -16,6 +16,9 @@ namespace ConsoleApplication3
             Dog dog = new Dog(); 
             Console.WriteLine("The dog is {0} years old and his name {1} and he loved to {2} and his color is {3} has an IQ of {4}", dog.Age(), dog.Name("Molly"), dog.Skills("dance"), dog.Color("brown"), dog.Iq(20));
 
+            dog.Type = "Bull Dog";
+            Console.WriteLine("Dog Type {0}", dog.Type);
+
 
         }
     }
