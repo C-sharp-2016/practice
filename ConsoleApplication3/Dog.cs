@@ -6,11 +6,37 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication3
 {
-    class Dog : Animal
+
+    interface MyInterface
     {
+        string Type { get; set; }  
+
+        int Iq(int iq);
+    }
+    class Dog : Animal, MyInterface
+    {
+        private string type;
+        public string Type {
+            get
+            {
+                return type;
+            }
+            set
+            {
+                type = value;
+            }
+        } 
+         
+         
         public Dog() :base ()
         {
             Console.WriteLine("This is a dog");
+        }
+
+         
+        public int Iq(int iq)
+        {
+            return iq;
         }
 
         public override string Name(string name)
