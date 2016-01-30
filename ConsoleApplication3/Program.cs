@@ -12,13 +12,11 @@ namespace ConsoleApplication3
     class Program
     {
         static void Main(string[] args)
-        {
-            int mapId = 100;
-            int itemId = 200;
-            int UID = 1;
+        { 
+            Dog dog = new Dog(); 
+            Console.WriteLine("The dog is {0} years old and his name {1} and he loved to {2} and his color is {3}.", dog.Age(), dog.Name("Molly"), dog.Skills("dance"), dog.Color("brown"));
 
-            Console.WriteLine("map id {0} item id {1} and uid {2}", mapId, itemId, UID);
-            
+
         }
     }
 
